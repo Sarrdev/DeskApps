@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>DeskApp</title>
+</head>
+<body>
+    <h1 class="text-center">DeskApp📖</h1>
+      
+    <div class="task-form container">
+        <input type="text" id="nom-personne" class="form-control" placeholder="Nom de la personne">
+        <input type="text" id="titre-tache" class="form-control" placeholder="Titre de la tâche">
+        <input type="text" id="tache-dscription" class="form-control" placeholder="Description">
+        <input type="date" id="tache-deadline" class="form-control">
+        <select id="tache-priorite" class="form-control">
+            <option value="Faible">Faible</option>
+            <option value="Moyenne">Moyenne</option>
+            <option value="Forte">Forte</option>
+        </select>
+        <button onclick="addTask()" class="btn btn-primary mt-3">Ajouter une Tâche</button>
+    </div>
+    
+    <div class="task-list container mt-4">
+        <h2 class="text-center mb-4">Liste des Tâches</h2>
+        <ul id="tache-list-ul" class="list-group">
+            <!-- Les tâches seront ajoutées ici -->
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

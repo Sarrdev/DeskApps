@@ -1,0 +1,213 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s;
+}
+
+/* Styles pour le mode nuit et le mode jour */
+/* ----------Mode-nuit---------- */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .task-form, .dark-mode .task-list {
+    background-color: #444;
+    box-shadow: 0 4px 6px rgba(255,255,255,0.1);
+}
+
+.dark-mode input, .dark-mode select {
+    border: 1px solid #777;
+    background-color: #555;
+    color: #fff;
+}
+.dark-mode .task-form button {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+.dark-mode h1{
+    color: #fff;
+}
+.dark-mode .completed {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* ---------------Mode-jour--------------- */
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+.task-form {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px; /* Changez width à max-width */
+    background-color: #fff;
+    padding: 20px 55px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.task-form input, .task-form select, .task-form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.task-form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.task-form button:hover {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: #fff;
+}
+
+.task-list {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.completed {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    color: #fff;
+}
+
+/* Vos styles existants ici */
+
+.task-card {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.task-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.task-details {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.task-priority {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-toggle-completion {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-toggle-completion:hover {
+    background-color: #218838;
+}
+
+.btn-edit {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.task-completed {
+    background-color: #d4edda;
+}
+
+.task-incomplete {
+    background-color: #f8d7da;
+}
+/* Réactivité */
+@media (max-width: 576px) {
+    .task-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
+/* Media queries pour rendre l'application réactive */
+@media screen and (max-width: 600px) {
+    .task-form {
+        max-width: 90%; /* Réduire la largeur pour les petits écrans */
+        padding: 20px;
+    }
+    
+    .task-list {
+        max-width: 90%; /* Réduire la largeur pour les petits écrans */
+        padding: 20px;
+    }
+}
